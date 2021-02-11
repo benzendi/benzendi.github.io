@@ -1,0 +1,598 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+body
+{
+	background-color: #f1f3f4;
+	font-family: sans-serif;
+}
+.top-nav-bar
+{
+	height: 60px;
+	top: 0;
+	position: sticky;
+	background: #fff;
+	margin-bottom: 20px;
+	border-bottom: 5px solid violet; /*Le 5px c'est l'épaisseur de la ligne violette*/
+	z-index: 2;
+}
+.logo
+{
+	height: 50px;
+	margin: 5px 25px;/*Permet d'ajuster la taille du logo*/
+	cursor: pointer;
+}
+.form-control/*Permet de mettre le cercle d'en haut*/
+{
+	margin-top: 15px;
+	margin-left: 30px;
+	border: 1px solid violet !important;
+	border-top-left-radius: 20px !important;
+	border-bottom-left-radius: 20px !important;
+	border-top-right-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+	box-shadow: none !important;
+}
+.input-group-text/*Permet de mettre le cercle d'en haut*/
+{
+	background: violet !important;
+	border: 1px solid violet !important;
+	margin: 8.5px 10px 3px 0 !important;
+	border-top-left-radius: 0px !important;
+	border-bottom-left-radius: 0px !important;
+	border-top-right-radius: 20 !important;
+	border-bottom-right-radius: 20 !important;
+	cursor: pointer;
+}
+.search-box/*Permet de mettre l'icone de rechercher en haut*/
+{
+	display: inline-flex;
+	width: 40%;
+}
+.fa-search/*Permet de mettre couleur au petit cercle ds icon rechercher*/
+{
+	color: blue;
+}
+.menu-bar
+{
+	width: 60%;
+	height: 60px;
+	float: right;
+}
+.menu-bar ul
+{
+	display: inline-flex;
+	float: right;
+}
+.menu-bar ul li
+{
+	border-left: 1px solid #fff;
+	list-style-type: none;
+	padding: 12px 50px;
+	text-align: center;
+	background-color: violet;
+	cursor: pointer;
+}
+.menu-bar ul li a
+{
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+}
+.fa-shopping-basket
+{
+	margin-right: 5px;
+}
+.fa-thumbs-up
+{
+	margin-right: 3px;
+}
+.fa-sign-in
+{
+	margin-right: 3px;
+}
+
+@media only screen and (max-width: 980px)/*Permet d'adapter'la page web à la taille de tout écran*/
+{
+	.top-nav-bar
+	{
+		height: 118px;
+		border-bottom: 0;
+	}
+	.search-box
+	{
+		width: 100%;
+	}
+	.menu-bar
+	{
+		width: 100%;
+	}
+	.menu-bar ul
+	{
+		margin: 10px 0;
+		width: 100%;
+	}
+	.menu-bar ul li
+	{
+		height: 40px;
+		width: 100%;
+		padding: 10px 0;
+	}
+}
+
+
+
+/*---------side-menu--------*/
+.side-menu
+{
+	height: 79%;
+	width: 15%;
+	font-size: 14px;
+	float: left;
+	z-index: 2;
+	background-color: #ddd;
+}
+.side-menu ul
+{
+	margin-left: 10px;
+}
+.side-menu ul li
+{
+	list-style-type: none;
+	font-weight: bold;
+	margin-top: 10px;
+	cursor: pointer;
+}
+.side-menu ul li:hover/*Permet de donner une couleur si on met le curseur dessus*/
+{
+	color: violet;
+}
+.side-menu ul li ul/*Permet de cacher les sous menu*/
+{
+	display: none;
+	z-index: 10px;
+	top: 77px;
+}
+.side-menu ul li:hover ul/*Permet d'afficher les sous menu qd on met le curseur dessus*/
+{
+	display: block;
+	height: 400px;
+	margin-left: 14%;
+	padding: 0 100px 10px 10px;
+	position: fixed;
+	background: #ececec;
+	box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.5);
+}
+.fa-angle-right
+{
+	margin-top: 4px;
+	margin-right: 8px;
+	float: right;
+}
+#menu-btn, #close-btn/*Met couleur aux barres*/
+{
+	font-size: 30px;
+	margin: 10px;
+	color: violet;
+	display: none;/*Permet de cacher le menu qd on pass sur grd écran*/
+}
+@media only screen and (max-width: 980px)/*Permet d'adapter la barre de menu à gauche en fnction de l'écran choisi*/
+{
+	.side-menu
+	{
+		width: 34%;
+		z-index: 20;
+		top: 133px;
+		position: fixed;
+		font-size: 12px;
+		display: none;/*Permet de cacher le menu qd on pass sur petit écran*/
+	}
+	.side-menu ul li ul
+	{
+		top: 133px;
+	}
+	.side-menu ul li:hover ul
+	{
+		margin-left: 32%;
+	}
+	#menu-btn
+	{
+		display: block;/*Permet de bloquer afficher le menu qd on pass sur écran petit*/
+	}
+}
+
+/*----------------slider CSS--------------*/
+.slider/*Permet de mieux ajuster les slider dans la forme de la pge web*/
+{
+	position: relative;
+	width: 85%;
+	margin-left: 15%;
+	margin-bottom: 5%;
+	margin-top: 5%;
+	padding: 0 10px;
+}
+.carousel/*Permet de mettre un pti arrondi autour des sliders*/
+{
+	box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.5);
+}
+.carousel-indicators
+{
+	z-index: 1 !important;
+}
+@media only screen and (max-width: 980px)/*Permet d'adapter les sliders en fnction de l'écran choisi*/
+{
+	.slider
+	{
+		width: 100%;
+		margin-left: 0;
+	}
+}
+
+/*-------------------------Features-categories CSS--------------*/
+
+.featured-categories
+{
+	margin: 10px 0;
+}
+.featured-categories img
+{
+	width: 100%;
+	padding: 5px 0;
+	transition: 1s;
+	cursor: pointer;
+}
+.featured-categories img:hover
+{
+	transform: scale(1.1);
+}
+
+/*-------------------On Sale product CSS-----------------*/
+
+.title-box
+{
+	background: violet;
+	color: #fff;
+	width: 180px;
+	padding: 4px 10px;
+	height: 30px;
+	margin-bottom: 30px;
+	display: flex;
+}
+.title-box h2
+{
+	font-size: 20px;
+}
+.title-box::after
+{
+	content: '';
+	border-top: 30px solid violet;
+	border-right: 50px solid transparent;
+	position: absolute;
+	display: flex;
+	margin-top: -4px;
+	margin-left: 170px;
+}
+
+/*-----------------------product-top CSS-----------------*/
+/*Permet d'afficher les petites icones de coeur avec les étoiles sur l'img si on met le curseur sur cette derniere*/
+.product-top img
+{
+	width: 100%;
+}
+.overlay-right
+{
+	display: block;
+	opacity: 0;
+	position: absolute;
+	top: 10%;
+	margin-left: 0;
+	width: 70px;
+}
+.overlay-right .fa
+{
+	cursor: pointer;
+	background-color: #fff;
+	color: #000;
+	height: 35px;
+	width: 35px;
+	font-size: 20px;
+	padding: 7px;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+.overlay-right .btn-secondary
+{
+	background: none !important;
+	border: none !important;
+	box-shadow: none !important;
+	margin-left: 90%;
+}
+.product-top:hover .overlay-right
+{
+	opacity: 1;
+	margin-left: 5%;
+	transition: 0.5s;
+}
+
+/*-------------------product-bottom CSS-------------*/
+/*C'est pr mettre en couleur les étoiles*/
+.product-bottom .fa
+{
+	color: violet;
+	font-size: 10px;
+}
+.product-bottom h3
+{
+	font-size: 20px;
+	font-weight: bold;
+}
+.product-bottom h5
+{
+	font-size: 15px;
+	padding-bottom: 10px;
+}
+.new-products
+{
+	margin: 50px 0;
+}
+
+/*-----------------------Website-Features---------------------*/
+.website-features
+{
+	/*margin: 50px 0;*/
+	margin-left: 20%;
+}
+.website-features img
+{
+	width: 15%;
+	margin-right: 10px;
+	cursor: pointer;
+}
+.feature-text
+{
+	margin-top: 10px;
+	font-size: 12px;
+	float: right;
+	width: 80%;
+	padding-left: 20px;
+}
+.feature-box
+{
+	padding-top: 20px;
+	margin-left: 30%;
+}
+
+/*--------------------Footer-----------------------*/
+.footer
+{
+	margin-top: 50px;
+	background: #000;
+	color: #fff;
+}
+.footer h1
+{
+	font-size: 20px;
+	margin: 25px;
+	cursor: pointer;
+}
+.footer p
+{
+	font-size: 12px;
+	cursor: pointer;
+}
+.copyright
+{
+	margin-bottom: -80px;
+	font-size: 15px;
+	padding-bottom: 20px;
+}
+.footer hr
+{
+	margin-top: 15px;
+	background-color: #ccc;
+}
+.footer-image img
+{
+	width: 150px;
+}
+.footer .row .fa/*Permet de mattre un espace de 20px entre les icons et le texte qui le suit*/
+{
+	padding-right: 20px;
+	font-size: 15px;
+}
+
+/*--------------------Single product----------------------*/
+
+.single-product
+{
+	margin-top: 70px;
+}
+.new-arrival
+{
+	background: yellow;
+	width: 140px;
+	font-size: 15px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+.col-md-6 h2
+{
+	color: violet;
+	cursor: pointer;
+	font-size: 25px;
+}
+.single-product .fa
+{
+	color: violet;
+}
+.single-product .prix
+{
+	color: orange;
+	cursor: pointer;
+	font-size: 25px;
+	font-weight: bold;
+	padding-top: 20px;
+}
+.single-product input
+{
+	border: 1px solid #ccc;
+	font-weight: bold;
+	height: 33px;
+	text-align: center;
+	width: 30px;
+}
+.single-product .btn-primary
+{
+	background: violet !important;
+	color: #fff;
+	font-size: 15px;
+	margin-left: 20px;
+	box-shadow: none !important;
+}
+
+/*----------------------product-description--------------------*/
+
+.product-description h4
+{
+	margin-top: 50px;
+	color: orange;
+}
+.product-description p
+{
+	margin-top: 15px;
+	font-size: 15px;
+}
+.product-description h5
+{
+	color: violet;
+}
+.product-description hr
+{
+	margin-bottom: 50px;
+	background-color: #ccc;
+}
+
+#images
+{
+	position: relative;
+	left: 920px;
+	top: 5px;
+}
+
+h5
+{
+	position: absolute;
+	left: 840px;
+	top: 80px;
+	color: blue;
+}
+
+.p1
+{
+	position: absolute;
+	font-size: 13px;
+	left: 740px;
+	top: 110px;
+	border: 2px solid violet;
+	padding-top: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#images1
+{
+	position: absolute;
+	left: 215px;
+	top: 80px;
+}
+
+.p2
+{
+	position: absolute;
+	font-size: 13px;
+	left: 370px;
+	top: 170px;
+	border: 2px solid green;
+	padding-top: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+h6
+{
+	position: absolute;
+	left: 370px;
+	top: 145px;
+	color: green;
+}
+
+.p3
+{
+	position: absolute;
+	font-size: 13px;
+	left: 485px;
+	top: 110px;
+	border: 2px solid red;
+	padding-top: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+@media screen and (max-width: 1125px)/*Permet d'adapter les sliders en fnction de l'écran choisi*/{
+	.body
+	{
+		display: block;
+	}
+	#images
+	{
+		width: 100%;
+		position: static;
+		padding: 0 130px;
+	}
+	#images1
+	{
+		width: 100%;
+		position: static;
+		padding: 0 150px;
+	}
+	h5
+	{
+		position: static;
+		width: 100%;
+		margin-left: 150px;
+	}
+	h6
+	{
+		position: static;
+		width: 100%;
+		margin-left: 170px;
+	}
+	
+	.p1
+	{
+		position: static;
+		width: 95%;
+		padding: 0 100px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.p2
+	{
+		position: static;
+		width: 95%;
+		padding: 0 100px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.p3
+	{
+		position: static;
+		width: 95%;
+		top: 40px;
+		padding: 0 100px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
